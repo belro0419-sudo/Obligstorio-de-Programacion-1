@@ -117,19 +117,5 @@ a {
     margin-right: 5px;
 }
 
-.influencers__title:hover::after {
-  visibility: visible;
-}
-
-.influencers__title::after {
-  content: "";
-  position: absolute;
-  visibility: hidden;
-  background-color: red ;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-}
-
 
 

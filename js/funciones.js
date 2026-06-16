@@ -40,13 +40,18 @@ agregarSalesBtn.addEventListener("click", () => {
 cerrarSalesModalBtn.addEventListener("click", () => {
   salesDialog.close();
 });
+
 //crear tabla influencer
-const tablaInfluencers = document.querySelector(".influencers__table");
+const tablaInfluencers = document.querySelector(".influencers__table-body");
+
 addInfluenceTableBtn.addEventListener("click", () => {
-  const nombre = document.querySelector("#nomInf").value;
-  const mail = document.querySelector("#mail").value;
+
+  const nombre   = document.querySelector("#nomInf").value;
+  const mail     = document.querySelector("#mail").value;
   const comision = document.querySelector("#com").value;
-  const fila = document.createElement("tr");
+  
+  const fila     = document.createElement("tr");
+
   fila.innerHTML = `
     <td>${nombre}</td>
     <td>${mail}</td>
@@ -54,7 +59,7 @@ addInfluenceTableBtn.addEventListener("click", () => {
     <td>$0</td>
     <td>-</td> 
     <td>
-      <button class="button">Eliminar</button>
+      <button class="button influencers__table-delete-btn">Eliminar</button>
     </td>
   `;
   tablaInfluencers.appendChild(fila);
@@ -63,6 +68,41 @@ addInfluenceTableBtn.addEventListener("click", () => {
   document.querySelector("#mail").value = "";
   document.querySelector("#com").value = "";
 });
+
+tablaInfluencers.addEventListener("click", (e) => {
+
+  if (e.target.classList.contains("influencers__table-delete-btn")) {
+    e.target.parentElement.parentElement.remove();}
+
+})
+
+
+// Boton ordenar por nombre
+const sortBtn = document.querySelector(".influencers__table-button");
+let ascendente = true;
+
+sortBtn.addEventListener("click", () => {
+  
+  const filas = Array.from(tablaInfluencers.rows);
+
+  filas.sort((filaUno, filaDos) => {
+    const nombreA = filaUno.cells[0].textContent;
+    const nombreB = filaDos.cells[0].textContent;
+
+    if (ascendente) {
+      return nombreA.localeCompare(nombreB, "es");
+    } else {
+      return nombreB.localeCompare(nombreA, "es");
+    }
+    });
+
+    filas.forEach((fila) => tablaInfluencers.appendChild(fila));
+    ascendente = !ascendente
+});
+
+
+
+
 //crear tabla articul
 const tablaArticle = document.querySelector(".articles__table");
 addArticleTableBtn.addEventListener("click", () => {
