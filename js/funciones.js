@@ -3,25 +3,24 @@
 // Show Modals
 
 // Variables
+
 //zona de influencers
-const agregarInfluencerBtn = document.querySelector(
-    ".influencers__show-modal-btn",
-  ),
-  influencersDialog = document.querySelector(".influencers__dialog"),
-  cerrarModalBtn = document.querySelector(".influencers__close-modal-btn"),
-  addInfluenceTableBtn = document.querySelector(
-    ".influencers__add-influencer-btn",
-  ),
+const agregarInfluencerBtn = document.querySelector(".influencers__show-modal-btn"),
+      influencersDialog    = document.querySelector(".influencers__dialog"),
+      cerrarModalBtn       = document.querySelector(".influencers__close-modal-btn"),
+      addInfluenceTableBtn = document.querySelector(".influencers__add-influencer-btn"),
+
   //zona de articulos
-  agregarArticuloBtn = document.querySelector(".articles__show-modal-btn"),
-  articuloDialog = document.querySelector(".articulo__dialog"),
-  cerrarArtModalBtn = document.querySelector(".articles__close-modal-btn"),
-  addArticleTableBtn = document.querySelector(".articles__add-modal-btn"),
+      agregarArticuloBtn   = document.querySelector(".articles__show-modal-btn"),
+      articuloDialog       = document.querySelector(".articulo__dialog"),
+      cerrarArtModalBtn    = document.querySelector(".articles__close-modal-btn"),
+      addArticleTableBtn   = document.querySelector(".articles__add-modal-btn"),
+
   //zona de sales
-  agregarSalesBtn = document.querySelector(".sales__show-modal-btn"),
-  salesDialog = document.querySelector(".sales__dialog"),
-  cerrarSalesModalBtn = document.querySelector(".sales__close-modal-btn"),
-  addASalesTableBtn = document.querySelector(".sales__add-modal-btn");
+      agregarSalesBtn = document.querySelector(".sales__show-modal-btn"),
+      salesDialog = document.querySelector(".sales__dialog"),
+      cerrarSalesModalBtn = document.querySelector(".sales__close-modal-btn"),
+      addASalesTableBtn = document.querySelector(".sales__add-modal-btn");
 
 // Influencer Modal
 agregarInfluencerBtn.addEventListener("click", () => {
@@ -59,7 +58,7 @@ addInfluenceTableBtn.addEventListener("click", () => {
     <td>${mail}</td>
     <td>${comision}%</td>
     <td>$0</td>
-    <td>-</td> 
+    <td></td> 
     <td>
       <button class="button influencers__table-delete-btn">Eliminar</button>
     </td>
@@ -71,14 +70,23 @@ addInfluenceTableBtn.addEventListener("click", () => {
   document.querySelector("#com").value = "";
 });
 
+<<<<<<< Updated upstream
 tablaInfluencers.addEventListener("click", (e) => {
 
   if (e.target.classList.contains("influencers__table-delete-btn")) {
     e.target.parentElement.parentElement.remove();}
+=======
+let eliminarVenta = document.querySelector(".influencers__table-delete-btn");
+
+eliminarVenta.addEventListener("click", (e) => {
+
+  
+>>>>>>> Stashed changes
 
 })
 
 
+<<<<<<< Updated upstream
 // Boton ordenar por nombre
 const sortBtn = document.querySelector(".influencers__table-button");
 let ascendente = true;
@@ -104,6 +112,8 @@ sortBtn.addEventListener("click", () => {
 
 
 
+=======
+>>>>>>> Stashed changes
 
 //crear tabla articul
 const tablaArticle = document.querySelector(".articles__table");
@@ -139,20 +149,10 @@ addASalesTableBtn.addEventListener("click", () => {
     <td>${cantidad}</td>
     <td>${medio}</td>
     <td>
-      <button class="button">Eliminar</button>
+      <button class="button">❌</button>
     </td>
 `;
   tablaSales.appendChild(fila);
   numeroVentas++;
   salesDialog.close();
 });
-// TODO: Hacer que el <button class="button articles__table-button">Código ↕</button> ordene la tabla de forma ascendente a descendete y visceversa.
-/* TODO: Investigar como hacer la grafica de burbujas.
-- Debe representar seis valores numericos
-- El equipo deberá investigar cómo generar la gráfica de burbujas de colores. Se debe mostrar una gráfica de burbujas que
-represente seis valores numéricos. Cada burbuja corresponde al total de ventas de ese medio y su tamaño es proporcional al
-monto representado: la burbuja asociada al valor mínimo debe tener un radio equivalente al 10 % del radio máximo,
-mientras que la burbuja asociada al valor máximo debe tener el 100 % del radio máximo.
-Las demás burbujas deben escalarse de forma proporcional entre esos extremos. Debe indicarse el monto de cada burbuja.
-Los colores son a elección. Deben quedar alineadas.
-*/
