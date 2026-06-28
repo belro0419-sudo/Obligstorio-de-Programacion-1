@@ -1,5 +1,8 @@
 /* Ana Belen Rodriguez Berriel / N° de estudiante: 373879 - Iván De León Lino / N° de estudiante: 330339 */
 
+/* 1 rem = 10px */
+/* Utilizamos la metodologia BEM para trabajar de forma mas agil */
+
 html {
   font-size: 62.5%;
 }
@@ -8,8 +11,7 @@ html {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  font-weight: 500;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .main {
@@ -18,27 +20,34 @@ html {
 
 .hero__title {
   margin-bottom: 4rem;
+  font-size: 2.5rem;
   padding: 1.5rem 0;
-  background-color: gray;
-}
-
-.main__title,
-.articles__title,
-.sales__title,
-.influencers__title {
-  margin-bottom: 2rem;
+  background-color: #808080;
 }
 
 .influencers__title,
 .articles__title,
-.sales__subtitle {
-  font-size: 1.8rem;
+.sales__title {
+  margin-bottom: 2rem;
+  font-size: 2rem;
 }
 
 .influencers__subtitle,
 .articles__subtitle,
-.sales__sale {
+.sales__subtitle {
   margin-bottom: 1.5rem;
+  font-size: 1.6rem;
+}
+
+.influencers__subsubtitle,
+.articles__subsubtitle,
+.sales__subsubtitle {
+  margin-bottom: 1.2rem;
+  font-size: 1.4rem;
+}
+
+.influencers__subsubtitle--featured {
+  font-size: 1.5rem;
 }
 
 .influencers__card,
@@ -57,7 +66,7 @@ html {
   border: 0;
   border-radius: 0.8rem;
   background-color: #0ea5b7;
-  color: white;
+  color: #ffffff;
   font-size: 1rem;
   cursor: pointer;
 }
@@ -76,8 +85,14 @@ html {
 .articles__table-cell,
 .sales__table-cell {
   padding: 0.4rem 0.4rem 0.5rem;
-  border: 0.1rem solid black;
+  border: 0.1rem solid #000000;
   font-size: 1.4rem;
+}
+
+.influencers__table-cell,
+.articles__table-cell,
+.sales__table-cell {
+  padding: 0.2rem 0.2rem 0.5rem;
 }
 
 .influencers__table-header,
@@ -118,7 +133,7 @@ html {
 }
 
 .footer__link {
-  color: rebeccapurple;
+  color: #663399;
   text-decoration: none;
 }
 
@@ -131,10 +146,12 @@ html {
   border-radius: 0.8rem;
 }
 
+/* Utilizamos el pseudoelemento backdrop, para oscurecer el fondo, cuando aparece el <dialog> */
+
 .influencers__dialog::backdrop,
 .articles__dialog::backdrop,
 .sales__dialog::backdrop {
-  background-color: rgb(0 0 0 / 45%);
+  background-color: #00000073;
 }
 
 .influencers__modal-card,
@@ -146,12 +163,14 @@ html {
 
 .influencers__sales-detail-btn,
 .sales__delete-btn {
-  padding: 0.8rem 1.4rem;
+  padding: 1.3rem 2.2rem;
 }
 
 .sales__chart-card {
   min-height: 14rem;
 }
+
+/* display: flex, para acomodar de forma mas sencilla el grafico de burbuja y que no se desalineen cuando uno crezca mas que el resto */
 
 .sales__bubble-chart {
   display: flex;
@@ -180,25 +199,25 @@ html {
 }
 
 .sales__bubble--instagram {
-  background-color: crimson;
+  background-color: #dc143c;
 }
 
 .sales__bubble--youtube {
-  background-color: royalblue;
+  background-color: #4169e1;
 }
 
 .sales__bubble--x {
-  background-color: green;
+  background-color: #008000;
 }
 
 .sales__bubble--tiktok {
-  background-color: orange;
+  background-color: #ffa500;
 }
 
 .sales__bubble--facebook {
-  background-color: purple;
+  background-color: #800080;
 }
 
 .sales__bubble--otras {
-  background-color: brown;
+  background-color: #a52a2a;
 }
