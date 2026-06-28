@@ -337,7 +337,7 @@ const actualizarGraficoBurbujas = () => {
 };
 
 const calcularRadioBurbuja = (valor, minimo, maximo) => {
-  let radioMinimo = 1;
+  let radioMinimo = 0.5;
   let radioMaximo = 5;
 
   if (maximo === 0) {
