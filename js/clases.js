@@ -216,7 +216,7 @@ class Sistema {
 
     return etiquetas;
   }
-
+                  //REVISAR//
   obtenerVentasDeInfluencer(influencer) {
     let ventasInfluencer = [];
 

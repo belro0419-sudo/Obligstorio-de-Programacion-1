@@ -5,65 +5,41 @@ let sistema = new Sistema();
 let ordenInfluencersAscendente = true;
 let ordenArticulosAscendente = true;
 
-const botonMostrarModalInfluencer = document.querySelector(
-  '.influencers__show-modal-btn',
-);
-const botonMostrarModalArticulo = document.querySelector(
-  '.articles__show-modal-btn',
-);
+const botonMostrarModalInfluencer = document.querySelector('.influencers__show-modal-btn',);
+const botonMostrarModalArticulo = document.querySelector('.articles__show-modal-btn',);
 const botonMostrarModalVenta = document.querySelector('.sales__show-modal-btn');
 
 const dialogoInfluencer = document.querySelector('.influencers__dialog');
 const dialogoArticulo = document.querySelector('.articles__dialog');
 const dialogoVenta = document.querySelector('.sales__dialog');
 
-const botonCerrarModalInfluencer = document.querySelector(
-  '.influencers__close-modal-btn',
-);
-const botonCerrarModalArticulo = document.querySelector(
-  '.articles__close-modal-btn',
-);
+const botonCerrarModalInfluencer = document.querySelector('.influencers__close-modal-btn',);
+const botonCerrarModalArticulo = document.querySelector('.articles__close-modal-btn',);
 const botonCerrarModalVenta = document.querySelector('.sales__close-modal-btn');
 
-const botonAgregarInfluencer = document.querySelector(
-  '.influencers__add-influencer-btn',
-);
-const botonAgregarArticulo = document.querySelector(
-  '.articles__add-article-btn',
-);
+const botonAgregarInfluencer = document.querySelector('.influencers__add-influencer-btn',);
+const botonAgregarArticulo = document.querySelector('.articles__add-article-btn',);
 const botonAgregarVenta = document.querySelector('.sales__add-sale-btn');
 
-const inputNombreInfluencer = document.querySelector(
-  '.influencers__name-input',
-);
+const inputNombreInfluencer = document.querySelector('.influencers__name-input',);
 const inputMailInfluencer = document.querySelector('.influencers__mail-input');
-const inputComisionInfluencer = document.querySelector(
-  '.influencers__commission-input',
-);
+const inputComisionInfluencer = document.querySelector('.influencers__commission-input',);
 
 const inputCodigoArticulo = document.querySelector('.articles__code-input');
-const inputDescripcionArticulo = document.querySelector(
-  '.articles__description-input',
-);
+const inputDescripcionArticulo = document.querySelector('.articles__description-input',);
 const inputPrecioArticulo = document.querySelector('.articles__price-input');
 
 const selectArticuloVenta = document.querySelector('.sales__article-select');
-const selectInfluencerVenta = document.querySelector(
-  '.sales__influencer-select',
-);
+const selectInfluencerVenta = document.querySelector('.sales__influencer-select',);
 const inputCantidadVenta = document.querySelector('.sales__quantity-input');
 const selectMedioVenta = document.querySelector('.sales__medium-select');
 const spanNumeroVenta = document.querySelector('.sales__article-number');
 
-const cuerpoTablaInfluencers = document.querySelector(
-  '.influencers__table-body',
-);
+const cuerpoTablaInfluencers = document.querySelector('.influencers__table-body',);
 const cuerpoTablaArticulos = document.querySelector('.articles__table-body');
 const cuerpoTablaVentas = document.querySelector('.sales__table-body');
 
-const botonOrdenarInfluencers = document.querySelector(
-  '.influencers__table-button',
-);
+const botonOrdenarInfluencers = document.querySelector('.influencers__table-button',);
 const botonOrdenarArticulos = document.querySelector('.articles__table-button');
 
 const graficoBurbujas = document.querySelector('.sales__bubble-chart');
@@ -111,8 +87,8 @@ const actualizarTodo = () => {
 };
 
 const agregarInfluencer = () => {
-  let nombre = inputNombreInfluencer.value.trim();
-  let mail = inputMailInfluencer.value.trim().toLowerCase();
+  let nombre = inputNombreInfluencer.value;
+  let mail = inputMailInfluencer.value.toLowerCase();
   let comision = Number(inputComisionInfluencer.value);
 
   if (nombre === '' || mail === '' || inputComisionInfluencer.value === '') {
@@ -137,7 +113,7 @@ const agregarInfluencer = () => {
 const actualizarTablaInfluencers = () => {
   sistema.ordenarInfluencersPorNombre(ordenInfluencersAscendente);
   cuerpoTablaInfluencers.innerHTML = '';
-
+              //REVISARER//
   for (let i = 0; i < sistema.influencers.length; i++) {
     let influencer = sistema.influencers[i];
     let totalComisiones = sistema.calcularTotalComisionesInfluencer(influencer);
@@ -169,7 +145,7 @@ const actualizarTablaInfluencers = () => {
 };
 
 const mostrarDetalleVentasInfluencer = (evento) => {
-  let mail = evento.target.dataset.mail;
+  let mail = evento.target.dataset.mail;  //revisar//
   let influencer = sistema.buscarInfluencer(mail);
   let ventas = sistema.obtenerVentasDeInfluencer(influencer);
 
@@ -214,8 +190,8 @@ const actualizarSelectInfluencers = () => {
 };
 
 const agregarArticulo = () => {
-  let codigo = inputCodigoArticulo.value.trim();
-  let descripcion = inputDescripcionArticulo.value.trim();
+  let codigo = inputCodigoArticulo.value;
+  let descripcion = inputDescripcionArticulo.value;
   let precio = Number(inputPrecioArticulo.value);
 
   if (codigo === '' || descripcion === '' || inputPrecioArticulo.value === '') {
@@ -330,7 +306,7 @@ const eliminarVenta = (evento) => {
     actualizarTodo();
   }
 };
-
+            //revisar//
 const actualizarGraficoBurbujas = () => {
   if (graficoBurbujas === null) {
     return;
