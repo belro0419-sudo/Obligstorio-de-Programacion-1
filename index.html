@@ -3,74 +3,50 @@
 <!doctype html>
 <html lang="es">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sistema de Gestion</title>
-    <link rel="stylesheet" href="./css/estilos.css" />
+    <meta charset="UTF-8" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+    <title>Sistema de Gestión</title>
+    <link rel="stylesheet" href="./css/estilos.css" >
   </head>
+
   <body>
-    <!-- Header -->
     <header class="hero">
       <h1 class="hero__title">Sistema de Gestión (Rodríguez - De León)</h1>
     </header>
 
-    <!-- Main Container -->
     <main class="main">
-      <h2 class="main__title">Manejo de influencers</h2>
-
       <!-- Influencers Section -->
       <section class="influencers">
+        <h2 class="influencers__title">Manejo de influencers</h2>
+
         <article class="influencers__card">
-          <h3 class="influencers__title">Alta de influencer</h3>
+          <h3 class="influencers__subtitle">Alta de influencer</h3>
           <button class="button influencers__show-modal-btn">
             Agregar influencer
           </button>
         </article>
 
+        <!-- Influencers Modal -->
         <article class="influencers__modal-card">
           <dialog class="influencers__dialog">
-            <h3 class="influencers__title">Datos del influencer a agregar</h3>
-            <h4 class="influencers__subtitle">Influencer</h4>
+            <h3 class="influencers__subtitle">
+              Datos del influencer a agregar
+            </h3>
+            <h4 class="influencers__subsubtitle influencers__subsubtitle--featured">
+              Influencer
+            </h4>
 
-            <label class="influencers__label" for="influencers__name-input"
-              >Nombre</label
-            >
-            <input
-              required
-              class="influencers__input influencers__name-input"
-              type="text"
-              id="influencers__name-input"
-            />
+            <label class="influencers__label" for="influencers__name-input">Nombre</label>
+            <input required class="influencers__input influencers__name-input" type="text" id="influencers__name-input">
 
-            <label class="influencers__label" for="influencers__mail-input"
-              >Mail</label
-            >
-            <input
-              required
-              class="influencers__input influencers__mail-input"
-              type="email"
-              id="influencers__mail-input"
-            />
+            <label class="influencers__label" for="influencers__mail-input">Mail</label>
+            <input required class="influencers__input influencers__mail-input" type="email" id="influencers__mail-input">
 
-            <label
-              class="influencers__label"
-              for="influencers__commission-input"
-              >% Comisión</label
-            >
-            <input
-              required
-              class="influencers__input influencers__commission-input"
-              type="number"
-              id="influencers__commission-input"
-            />
+            <label class="influencers__label" for="influencers__commission-input">% Comisión</label>
+            <input required class="influencers__input influencers__commission-input" type="number" id="influencers__commission-input">
 
-            <button type="button" class="button influencers__close-modal-btn">
-              Cancelar
-            </button>
-            <button
-              type="button"
-              class="button influencers__add-influencer-btn"
-            >
+            <button type="button" class="button influencers__close-modal-btn">Cancelar</button>
+            <button type="button" class="button influencers__add-influencer-btn">
               Agregar
             </button>
           </dialog>
@@ -78,11 +54,9 @@
 
         <!-- Influencers Table Card -->
         <article class="influencers__card">
-          <h3 class="influencers__title">Tabla de influencers</h3>
+          <h3 class="influencers__subtitle">Tabla de influencers</h3>
 
-          <!-- Influencers Table -->
           <table class="influencers__table">
-            <!-- Influencers Table Head -->
             <thead class="influencers__table-head">
               <tr class="influencers__table-row">
                 <th class="influencers__table-header">
@@ -101,8 +75,7 @@
           </table>
 
           <p class="influencers__information">
-            Información: 🔥Top comisiones (cobro más$) 🧊 Cero ventas 🟢Venta
-            más cara (mayor monto en una sola venta)
+            Información: 🔥 Top comisión (cobro más $) 🧊 Cero ventas 🟢 Venta más cara (mayor monto en una sola venta)
           </p>
         </article>
       </section>
@@ -112,62 +85,34 @@
         <h2 class="articles__title">Manejo de Artículos</h2>
 
         <article class="articles__card">
-          <!-- Alta de Articulo -->
-          <h3 class="articles__title">Alta de Artículo</h3>
-          <button class="button articles__show-modal-btn">
-            Agregar artículo
-          </button>
+          <h3 class="articles__subtitle">Alta de Artículo</h3>
+          <button class="button articles__show-modal-btn">Agregar artículo</button>
         </article>
 
+        <!-- Articles Modal -->
         <article class="articles__modal-card">
           <dialog class="articles__dialog">
-            <h3 class="articles__title">Datos del artículo a agregar</h3>
-            <h4 class="articles__subtitle">Artículo</h4>
+            <h3 class="articles__subtitle">Datos del artículo a agregar</h3>
+            <h4 class="articles__subsubtitle">Artículo</h4>
 
-            <label class="articles__label" for="articles__code-input"
-              >Código</label
-            >
-            <input
-              required
-              class="articles__input articles__code-input"
-              type="text"
-              id="articles__code-input"
-            />
+            <label class="articles__label" for="articles__code-input">Código</label>
+            <input required class="articles__input articles__code-input" type="text" id="articles__code-input">
 
-            <label class="articles__label" for="articles__description-input"
-              >Descripción</label
-            >
-            <input
-              required
-              class="articles__input articles__description-input"
-              type="text"
-              id="articles__description-input"
-            />
+            <label class="articles__label" for="articles__description-input">Descripción</label>
+            <input required class="articles__input articles__description-input" type="text" id="articles__description-input">
 
-            <label class="articles__label" for="articles__price-input"
-              >Precio</label
-            >
-            <input
-              required
-              class="articles__input articles__price-input"
-              type="number"
-              id="articles__price-input"
-            />
+            <label class="articles__label" for="articles__price-input">Precio</label>
+            <input required class="articles__input articles__price-input" type="number" id="articles__price-input">
 
-            <button type="button" class="button articles__close-modal-btn">
-              Cancelar
-            </button>
-            <button type="button" class="button articles__add-article-btn">
-              Agregar
-            </button>
+            <button type="button" class="button articles__close-modal-btn">Cancelar</button>
+            <button type="button" class="button articles__add-article-btn">Agregar</button>
           </dialog>
         </article>
 
         <!-- Articles Table Card -->
         <article class="articles__card articles__card--table">
-          <h3 class="articles__title">Tabla de artículos</h3>
+          <h3 class="articles__subtitle">Tabla de artículos</h3>
 
-          <!-- Articles Table -->
           <table class="articles__table">
             <thead class="articles__table-head">
               <tr class="articles__table-row">
@@ -184,8 +129,7 @@
           </table>
 
           <p class="articles__information">
-            Información :⭐ Artículo más vendido(mayor cantidad de unidades
-            vendidas)
+            Información: ⭐ Artículo más vendido (mayor cantidad de unidades vendidas)
           </p>
         </article>
       </section>
@@ -199,44 +143,25 @@
           <button class="button sales__show-modal-btn">Agregar venta</button>
         </article>
 
+        <!-- Sales Modal Card -->
         <article class="sales__modal-card">
           <dialog class="sales__dialog">
             <h3 class="sales__subtitle">Datos de la venta a agregar</h3>
-            <h4 class="sales__sale">Venta</h4>
+            <h4 class="sales__subsubtitle">Venta</h4>
 
             <span class="sales__article-number">Nro: 1</span>
 
-            <label class="sales__label" for="sales__article-select"
-              >Artículo</label
-            >
-            <select
-              class="sales__select sales__article-select"
-              id="sales__article-select"
-            ></select>
+            <label class="sales__label" for="sales__article-select">Artículo</label>
+            <select class="sales__select sales__article-select" id="sales__article-select"></select>
 
-            <label class="sales__label" for="sales__influencer-select"
-              >Influencer</label
-            >
-            <select
-              class="sales__select sales__influencer-select"
-              id="sales__influencer-select"
-            ></select>
+            <label class="sales__label" for="sales__influencer-select">Influencer</label>
+            <select class="sales__select sales__influencer-select" id="sales__influencer-select"></select>
 
-            <label class="sales__label" for="sales__quantity-input"
-              >Cantidad</label
-            >
-            <input
-              required
-              class="sales__input sales__quantity-input"
-              type="number"
-              id="sales__quantity-input"
-            />
+            <label class="sales__label" for="sales__quantity-input">Cantidad</label>
+            <input required class="sales__input sales__quantity-input" type="number" id="sales__quantity-input">
 
             <label class="sales__label" for="sales__medium-select">Medio</label>
-            <select
-              class="sales__select sales__medium-select"
-              id="sales__medium-select"
-            >
+            <select class="sales__select sales__medium-select" id="sales__medium-select">
               <option value="1">1 Instagram</option>
               <option value="2">2 YouTube</option>
               <option value="3">3 X</option>
@@ -245,12 +170,8 @@
               <option value="6">6 Otras</option>
             </select>
 
-            <button type="button" class="button sales__close-modal-btn">
-              Cancelar
-            </button>
-            <button type="button" class="button sales__add-sale-btn">
-              Agregar
-            </button>
+            <button type="button" class="button sales__close-modal-btn">Cancelar</button>
+            <button type="button" class="button sales__add-sale-btn">Agregar</button>
           </dialog>
         </article>
 
@@ -260,7 +181,6 @@
             Tabla de ventas (ordenada por número de venta)
           </h3>
 
-          <!-- Sales Table -->
           <table class="sales__table">
             <thead class="sales__table-head">
               <tr class="sales__table-row">
@@ -276,6 +196,7 @@
           </table>
         </article>
 
+        <!-- Sales Chart Card -->
         <article class="sales__card sales__chart-card">
           <h3 class="sales__subtitle">Gráfico de burbujas</h3>
           <div class="sales__bubble-chart"></div>
@@ -285,25 +206,15 @@
 
     <!-- Footer -->
     <footer class="footer">
-      <p class="footer__text">
-        Sitio para el Obligatorio de Programación 1 desarrollado por
-        <a
-          class="footer__link"
-          href="https://www.linkedin.com/in/belen-rodriguez-2a7148371/"
-          target="_blank"
-        >
-          Ana Belen Rodriguez Berriel
-        </a>
-        y
-        <a
-          class="footer__link"
-          href="https://www.linkedin.com/in/ivan-de-leon-lino/?isSelfProfile=false"
-          target="_blank"
-        >
-          Ivan De Leon Lino
-        </a>
-      </p>
+      <h4 class="footer__name">Belen Rodríguez - N.º de estudiante: 373879</h4>
+      <span class="footer__linkedin">LinkedIn:</span>
+      <a class="footer__link" href="https://www.linkedin.com/in/belen-rodriguez-2a7148371/" target="_blank">Belen Rodríguez</a>
+
+      <h4 class="footer__name">Iván De León - N.º de estudiante: 330339</h4>
+      <span class="footer__linkedin">LinkedIn:</span>
+      <a class="footer__link" href="https://www.linkedin.com/in/ivan-de-leon-lino/?isSelfProfile=false" target="_blank">Iván De León</a>
     </footer>
+
     <script src="./js/clases.js"></script>
     <script src="./js/funciones.js"></script>
   </body>
